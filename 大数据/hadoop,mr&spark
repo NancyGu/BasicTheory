@@ -1,3 +1,7 @@
+# 一、综述
+hadoop是源于谷歌论文，基于mapreduce的java实现。
+mapreduce大致分为map和reduce的过程。eg1:TF-IDF的提取。
+
 #mapreduce
 #hadoop
 #spark
