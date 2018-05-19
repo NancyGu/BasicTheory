@@ -11,7 +11,12 @@ class List():
             self.head = Node(v,None)
         else:
             # print("add in head next" + str(v))
-            self.head.next = Node(v,None)
+            temp = self.head
+            while temp.next:
+                temp = temp.next
+            temp.next = Node(v,None)
+
+
     def print_list(self):
         temp_point = self.head
         if not temp_point:
@@ -19,14 +24,14 @@ class List():
         else:
             # print("the list is:")
             while temp_point:
-                print(temp_point.var)
+                print(temp_point.var,temp_point.next)
                 temp_point = temp_point.next
 
 if __name__ == '__main__':
     list_ins = List()
-    list_ins.print_list()
 
 
     list_ins.add_node(1)
     list_ins.add_node(2)
+    list_ins.add_node(3)
     list_ins.print_list()
